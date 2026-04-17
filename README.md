@@ -1,5 +1,7 @@
 🐊dsr_impact_analysis
+
 두산로봇 M0609와 OnRobot RG2 그리퍼를 활용한 로봇 충격량 분석 및 시뮬레이션 패키지입니다. 본 패키지는 독립적인 실행을 위해 모든 모델 데이터(URDF, Meshes)를 내재화하고 있습니다.
+
 
 환경 설정 (Environment)
 OS: Ubuntu 22.04 (Jammy Jellyfish)
@@ -12,6 +14,7 @@ Tools: VS Code, ROS 2 Launch, Rviz2
 
 패키지 구조 (Directory Structure)
 빌드 에러 방지를 위해 모든 메쉬 파일을 평면 구조(Flat)로 관리합니다.
+
 
 Plaintext
 dsr_impact_analysis/
@@ -26,13 +29,15 @@ dsr_impact_analysis/
 ├── setup.py                  # 리소스 빌드 및 설치 설정
 └── README.md
 
+
 설치 및 빌드 (Installation & Build)
+
 1. 워크스페이스 준비
 Bash
 mkdir -p ~/impact_analysis_ws/src
 cd ~/impact_analysis_ws/src
-# GitHub에서 패키지 클론 또는 복사
-git clone https://github.com/[YOUR_ID]/dsr_impact_analysis.git
+
+
 2. 의존성 및 빌드
 메쉬 폴더 구조 에러를 방지하기 위해 build와 install 폴더를 초기화한 후 빌드하는 것을 권장합니다.
 
@@ -41,7 +46,8 @@ cd ~/impact_analysis_ws
 rm -rf build install log
 colcon build --symlink-install
 source install/setup.bash
-💻 실행 방법 (Usage)
+
+실행 방법 (Usage)
 시뮬레이션 및 Rviz 확인
 직접 작성한 충격량 분석 노드와 Rviz를 동시에 실행합니다.
 
